@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { FaustProvider } from "@faustwp/core";
 import "../styles/globals.css";
 import { WordPressBlocksProvider } from '@faustwp/blocks';
+import MyCoolBlock from '../wp-blocks'
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -12,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
     <FaustProvider pageProps={pageProps}>
       <WordPressBlocksProvider
         config={{
-          blocks,
+          MyCoolBlock,
         }}
       >
         <Component {...pageProps} key={router.asPath} />

@@ -3,7 +3,7 @@ import Head from "next/head";
 import EntryHeader from "../components/entry-header";
 import Footer from "../components/footer";
 import Header from "../components/header";
-import { WordPressBlocksViewer } from '@faustwp/blocks';
+import { WordPressBlocksViewer } from "@faustwp/blocks";
 
 export default function Component(props) {
   // Loading state for previews
@@ -32,7 +32,7 @@ export default function Component(props) {
       <main className="container">
         <EntryHeader title={title} date={date} author={author.node.name} />
         <div dangerouslySetInnerHTML={{ __html: content }} />
-        <WordPressBlocksViewer contentBlocks={contentBlocks}/>
+        <WordPressBlocksViewer contentBlocks={contentBlocks} />
       </main>
 
       <Footer />
@@ -49,7 +49,7 @@ Component.variables = ({ databaseId }, ctx) => {
 
 Component.query = gql`
   ${Header.fragments.entry}
-  ${blocks.CoreCode.fragments.entry}
+  ${blocks.MyCoolBlock.fragments.entry}
   query GetPost($databaseId: ID!, $asPreview: Boolean = false) {
     post(id: $databaseId, idType: DATABASE_ID, asPreview: $asPreview) {
       title
@@ -59,6 +59,14 @@ Component.query = gql`
         node {
           name
         }
+      }
+      contentBlocks {
+        name
+        __typename
+        renderedHtml
+        id: nodeId
+        parentId
+        ...${blocks.MyCoolBlock.fragments.key}
       }
     }
     ...HeaderFragment

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.7",
+    "@faustwp/blocks": "^0.1.0",
     "@faustwp/cli": "0.2.2",
     "@faustwp/core": "0.2.3",
     "graphql": "^16.6.0",
