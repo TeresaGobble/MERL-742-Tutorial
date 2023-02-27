@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }) {
     <FaustProvider pageProps={pageProps}>
       <WordPressBlocksProvider
         config={{
-          MyCoolBlock,
+          blocks,
         }}
       >
         <Component {...pageProps} key={router.asPath} />
