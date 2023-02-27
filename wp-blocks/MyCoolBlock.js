@@ -8,7 +8,7 @@ export default function MyCoolBlock(props) {
 MyCoolBlock.fragments = {
   key: `MyCoolBlockBlockFragment`,
   entry: gql`
-    fragment MyCoolBlockBlockFragment on MyCoolBlock {
+    fragment MyCoolBlockBlockFragment on CreateBlockMycoolblock {
       attributes {
         color
         content
