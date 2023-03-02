@@ -1,15 +1,13 @@
 import { gql } from "@apollo/client";
 
-export default function MyCoolBlock(props) {
+export default function CreateBlockMycoolblock(props) {
   const className = 'wp-block-code';
   return (
-    <pre className={className}>
-      <p>{`${props.attributes?.content}`}</p>
-    </pre>
+    <div>Something Something</div>
   );
 }
 
-MyCoolBlock.fragments = {
+CreateBlockMycoolblock.fragments = {
   key: `MyCoolBlockBlockFragment`,
   entry: gql`
     fragment MyCoolBlockBlockFragment on CreateBlockMycoolblock {
@@ -21,3 +19,8 @@ MyCoolBlock.fragments = {
     }
   `,
 };
+
+
+{/* <pre className={className}>
+<p>{`${props.attributes?.content}`}</p>
+</pre> */}

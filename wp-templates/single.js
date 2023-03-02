@@ -53,7 +53,7 @@ Component.variables = ({ databaseId }, ctx) => {
 
 Component.query = gql`
 ${Header.fragments.entry}
-${blocks.MyCoolBlock.fragments.entry}
+${blocks.CreateBlockMycoolblock.fragments.entry}
 query GetPost($databaseId: ID!, $asPreview: Boolean = false) {
   post(id: $databaseId, idType: DATABASE_ID, asPreview: $asPreview) {
     title
@@ -71,7 +71,7 @@ query GetPost($databaseId: ID!, $asPreview: Boolean = false) {
       id: nodeId
       parentId
 
-        ...${blocks.MyCoolBlock.fragments.key}
+        ...${blocks.CreateBlockMycoolblock.fragments.key}
 
     }
   }

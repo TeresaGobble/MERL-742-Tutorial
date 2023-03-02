@@ -1,4 +1,4 @@
-import MyCoolBlock from './MyCoolBlock';
+import CreateBlockMycoolblock from './MyCoolBlock';
 export default {
-  MyCoolBlock
+  CreateBlockMycoolblock
 }
