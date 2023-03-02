@@ -27,3 +27,14 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+@font-face {
+	font-family: Gilbert;
+	src: url(../assets/gilbert-color.otf);
+	font-weight: 700;
+}
+
+.wp-block-create-block-mycoolblock {
+	font-family: Gilbert, sans-serif;
+	font-size: 40px;
+}

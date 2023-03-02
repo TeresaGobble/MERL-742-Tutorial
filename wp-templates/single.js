@@ -19,6 +19,8 @@ export default function Component(props) {
   const { title, content, date, author } = props.data.post;
   const { contentBlocks } = props.data.post;
 
+  console.log("contentBlocks", contentBlocks)
+  
   return (
     <>
       <Head>
